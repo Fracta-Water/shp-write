@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.4.4
+
+### Patch Changes
+
+- [#2](https://github.com/Fracta-Water/shp-write/pull/2) [`ed8d75d`](https://github.com/Fracta-Water/shp-write/commit/ed8d75dd4160c1a793fd420c676dc7b991936025) Thanks [@JinIgarashi](https://github.com/JinIgarashi)! - fix: Multiple LineStrings should map to multiple features in output
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.4.0"></a>
