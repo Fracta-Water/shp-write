@@ -1,4 +1,4 @@
-# @mapbox/shp-write
+# @fracta-ai/shp-write
 
 Writes shapefile in pure javascript. Uses [dbf](https://github.com/tmcw/dbf)
 for the data component, and [jsZIP](http://stuk.github.io/jszip/) to generate downloads in-browser.
@@ -13,15 +13,15 @@ for the data component, and [jsZIP](http://stuk.github.io/jszip/) to generate do
 
 NPM
 
-    npm install --save @mapbox/shp-write
+    npm install --save @fracta-ai/shp-write
   
 Yarn
 
-    yarn add @mapbox/shp-write
+    yarn add @fracta-ai/shp-write
 
 Browser
 
-    https://unpkg.com/@mapbox/shp-write@latest/shpwrite.js
+    https://unpkg.com/@fracta-ai/shp-write@latest/shpwrite.js
 
 ## Caveats
 
@@ -34,7 +34,7 @@ Browser
 ## Example
 
 ```js
-var shpwrite = require("@mapbox/shp-write");
+var shpwrite = require("@fracta-ai/shp-write");
 
 const geoJSON = {
     type: "FeatureCollection",
