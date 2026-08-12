@@ -3,13 +3,8 @@
   "baseBranch": "master",
   "access": "public",
   "format": "auto",
-  "changelog": [
-    "@changesets/changelog-github",
-    {
-      "repo": "Fracta-Water/shp-write"
-    }
-  ],
-  "commit": true,
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
   "ignore": [],
   "fixed": [],
   "linked": [],
