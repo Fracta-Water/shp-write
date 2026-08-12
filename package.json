@@ -38,6 +38,7 @@
     "jszip": "^3.10.1"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^1.0.0",
     "@changesets/cli": "^3.0.0",
     "browserify": "^17.0.0",
     "cz-conventional-changelog": "^1.2.0",
