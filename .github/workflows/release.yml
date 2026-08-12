@@ -1,0 +1,52 @@
+name: Release
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches: [master]
+
+env:
+  CI: true
+  NODE_VERSION: 24
+
+jobs:
+  release:
+    # prevents this action from running on forks
+    if: github.repository == 'fracta-water/shp-write'
+    permissions:
+      contents: write # to create release (changesets/action)
+      pull-requests: write # to create pull request (changesets/action)
+      id-token: write # Required for OIDC
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: build packages
+        run: npm run make
+
+      # OIDC requires npm v11.5.1 or later, so ensure we have the latest npm installed
+      - name: Install latest npm
+        run: npm install -g npm@latest
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d # v1.9.0
+        with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: npm run changeset:release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
