@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fracta-ai/shp-write.git"
+    "url": "git://github.com/Fracta-Water/shp-write.git"
   },
   "files": [
     "dist/index.js",
@@ -30,7 +30,7 @@
   "author": "Tom MacWright",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/fracta-ai/shp-write/issues"
+    "url": "https://github.com/Fracta-Water/shp-write/issues"
   },
   "dependencies": {
     "dbf": "0.2.0",
