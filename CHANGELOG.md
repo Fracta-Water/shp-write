@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.4.5
+
+### Patch Changes
+
+- 8c7ff91: fix: updated index.d.ts to declare @fracta-ai/shp-write instead of old @mapbox namespace
+
 ## 0.4.4
 
 ### Patch Changes
